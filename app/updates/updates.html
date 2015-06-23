@@ -1,0 +1,14 @@
+<div class="innerRegion">
+	<h1>Updates</h1>
+	<div>
+		<div ng-repeat="update in UpdateResponse" >
+			<div class="update-version">{{ update.version }} </div>		
+			<div class="update-date">{{ update.date }}</div>
+			<br/>
+			<div class="update-info" ng-repeat="info in update.changes">
+				{{ info }}<br/>
+			</div>
+			<p>
+		</div>
+	</div>
+</div>

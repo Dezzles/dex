@@ -1,0 +1,18 @@
+<center>
+	<div id="main-nav">
+		<ul id="nav-primary">
+			<li ng-repeat="group in dexGroups">
+				<a title="Region">{{ group.name }}</a>
+				<ul class="subnav">
+					<li ng-repeat="dex in group.dexes">
+						<a href="#/pokedex/{{ dex }}">{{ dex }}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</center>
+
+<div ng-repeat="pkmn in Pokedex.pokemon" class="checkboxWrapper" >
+	<div dex-entry id="pkmn" dex="Pokedex"> </div>
+</div>

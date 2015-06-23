@@ -1,0 +1,10 @@
+<div>
+	<div >
+		<img name="name" ng-click="updateValue( )" src="img/pokeball{{ getValue( ) }}.png" class="checked" style="display: inline-block; height: 100%; vertical-align:top;"></img>	
+		<div style="width: 60%; display: inline-block;">
+			<div ng-repeat="entry in set.items track by $index" class="checkboxWrapper" style="width: 100%;">
+				<div ability-row row="entry" pkmn="2"> </div>
+			</div>
+		</div>
+	</div>
+</div>

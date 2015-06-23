@@ -1,0 +1,265 @@
+body
+{
+	background: url("img/bg.png");
+}
+#header
+{
+	margin: 0 12.5% 0 12.5%;
+	width: 75%;
+}
+#page
+{
+	border: 3px black solid;
+	margin: 0 12.5% 0 12.5%;
+	width: 75%;
+}
+.center h1 
+{
+	display: inline;
+}
+
+div
+{
+	#border: 1px solid red;
+}
+
+#footer
+{
+	text-align: center;
+}
+
+#regions
+{
+	border: 1px solid black;
+	width: 100%;
+	background-color: white;
+}
+#menu
+{
+	width: 100%;
+	height: 40px;
+	border-bottom: 3px solid black;
+	background-color: white;
+	
+}
+#pokedex
+{
+	width: 100%;
+	border-bottom: 3px solid black;
+	float: left;
+	background-color: white;
+}
+#options
+{
+	width: 100%;
+	border: 1px solid black;
+	float: left;
+	background-color: RGB(220, 220, 220);
+}
+#footer {
+	float: left;
+	width: 100%;
+}
+
+.sup
+{
+	vertical-align: super;
+	font-size: 10px;
+}
+
+.menuWrapper {
+	height: 40px;
+	background-color: RGB( 255, 255, 255 );
+}
+
+.menuItem {
+	display: inline-block;
+	width: 19%;
+	height: 100%;
+    text-align: center;
+	vertical-align: text-center;
+	border: 1px solid black;
+	background-color: yellow;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.selected {
+	background-color: yellow;
+}
+
+.checkboxWrapper{
+	min-height: 30px;
+	width: 20%;
+	display: inline-block;
+}
+
+.statBlock {
+	display:inline-block;
+}
+
+.StatItem{
+	display:inline-block;
+	width: 200px;
+}
+
+.ThinBlock{
+	display:inline-block;
+	width: 100px;
+}
+.block {
+	display: inline-block;
+}
+.block-min130 {
+	display: inline-block;
+	min-width: 130px;
+}
+.block-1 {
+	display:inline-block;
+	width: 8.33333%
+}
+.block-2 {
+	display:inline-block;
+	width: 16.66666%
+}
+.block-3 {
+	display:inline-block;
+	width: 25%;
+}
+.block-4 {
+	display:inline-block;
+	width: 33.33333%;
+}
+
+.block-6 {
+	display:inline-block;
+	width: 50%;
+}
+
+.block-8 {
+	display:inline-block;
+	width: 66.66666%;
+}
+.block-12 {
+	display:inline-block;
+	width: 100%;
+}
+
+
+.outerRegion {
+	padding: 10px;
+}
+.innerRegion
+{
+	padding: 10px;
+}
+input[type=checkbox]:before { content:","; display:inline-block; width:24px; height:24px; background:red; }
+input[type=checkbox]:checked:before { background:green; }
+
+input[type=checkbox]:before { background: url("img/pokeballoff.png") #fff;}
+input[type=checkbox]:checked:before { background: url("img/pokeball.png") #fff; }
+
+
+.update-version
+{
+	font-weight: bold;
+	margin-right: 5px;
+	display:inline-block;
+}
+.update-date
+{
+	font-weight: bold;
+	margin-right: 5px;
+	display:inline-block;
+}
+
+.update-version
+{
+
+}
+
+#main-nav {
+    width: 100%;
+    height: 40px;
+    background: white;
+}
+#main-nav .subnav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    list-style-type: none;
+    background: white;
+    margin: 0;
+    /*border:solid 1px black;/**/
+    z-index:5;
+    padding:0;
+}
+#main-nav .subnav li {
+    display: block;
+    border: solid 1px black;
+    margin:0;
+	width: 100%;
+}
+#main-nav .subnav li a {
+    color: #333;
+    height:20px;
+	width: 100%;
+	
+}
+#main-nav .subnav li a:hover {
+    background: RGB(200,200,200);
+}
+#nav-primary {
+    list-style-type: none;
+    margin: 0;
+    float: left;
+    padding:0;
+	width: 100%;
+}
+#nav-primary li {
+	border: 1px black solid;
+    float: left;
+    position: relative;
+	height: 40px;
+	width: 19.5%;
+}
+#nav-primary li a {
+	width: 100%;
+    float: left;
+    color: #000;
+    text-align: center;
+    padding-top: 14px;
+    line-height: 16px;
+    width: 100%;
+    text-decoration:none;
+}
+#nav-primary li a:hover {
+    text-decoration:none;
+}
+#nav-primary li:hover .subnav {
+    display: block;
+}
+
+.dittobox {
+	width: 70px;
+	text-align: center;
+	vertical-align: middle;
+}
+.dittoheader {
+	vertical-align: middle;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	font-weight: bold;
+}
+.dittotext {
+	width: 100%;
+}
+
+.dittoTable {
+    border-collapse: collapse;
+	vertical-align: middle;
+
+}

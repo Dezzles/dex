@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dezzles' Pokedex Tracker</title>
+	<meta name="description" content=",">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="pokething.css">
+</head>
+<body ng-app>
+	<div id="header">
+		<div>
+			<center><h1><img src="img/flabebe.png" alt="," height="60px"/> Pokedex Tracker <img src="img/vulpix.png" alt="," height="60px"/></h1></center>
+		</div>
+	</div>
+	<div id="page">
+
+	<div ng-include src="'app/header/header.html'"> test</div>
+		<div id="regions">
+			<div ng-view></div>
+		</div>
+	<div ng-include src="'app/header/footer.html'"> </div>
+	</div>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-route.min.js"></script>
+	<script src="cookies.min.js"></script>
+	<script src="data/data.js"></script>
+	<script src="data/dexStorage.js"></script>
+	<script src="data/dittoStorage.js"></script>
+	<script src="data/breedStorage.js"></script>
+	<script src="data/abilityStorage.js"></script>
+	<script src="app.js"></script>
+	<script src="app/pokedex/pokedex.js"></script>
+	<script src="app/pokedex/dexentry.js"></script>
+	<script src="app/stats/stats.js"></script>
+	<script src="app/tools/tools.js"></script>
+	<script src="app/breeding/breeding.js"></script>
+	<script src="app/breeding/breedset.js"></script>
+	<script src="app/breeding/breedPair.js"></script>
+	<script src="app/abilities/abilities.js"></script>
+	<script src="app/abilities/abilityrow.js"></script>
+	<script src="app/abilities/abilityset.js"></script>
+	<script src="app/ditto/ditto.js"></script>
+	<script src="app/ditto/dittostat.js"></script>
+	<script src="app/header/directives.js"></script>
+	<script src="app/menu/menu.js"></script>
+	<script src="app/updates/updates.js"></script>
+</body>
+</html>

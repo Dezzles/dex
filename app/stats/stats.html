@@ -1,0 +1,10 @@
+<div class="innerRegion">
+	<h1>Stats</h1>
+	<div id=stats">
+		<div ng-repeat="dex in pokedexes" >
+			<div class="StatItem">{{ dex.name }} completion: </div>		
+			<div class="StatItem"><div class="statBlock" >{{dex.completion}}</div> / {{ dex.pokemon.length }} (<div class="statBlock">{{ 100 * dex.completion / dex.pokemon.length | number : 0 }}</div>%)</div>
+			<br/>
+		</div>
+	</div>
+</div>

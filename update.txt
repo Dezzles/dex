@@ -1,0 +1,114 @@
+[
+{
+	"version" : "3.00",
+	"date" : "2015-06-30",
+	"changes" : ["Transitioned over to AngularJS to make a bunch of stuff much easier.",
+	"Dates now stored in ISO standard",
+	"Added Hoopa",
+	"Changes update file format",
+	"Smogon now uses XY database (probably)",
+	"Added tools section",
+	"Added breeding section to tools",
+	"Fixed issue with drop down alignments (finally)",
+	"Added Ditto nature tracking tool",
+	"Added hidden power tracking tool"]
+},
+{
+	"version" : "2.10",
+	"date" : "2014-10-06",
+	"changes" : ["Modified the way the Pokedex options are listed to make it take up less room. Yay for drop down boxes.",
+	"Added Diance.",
+	"Added a bunch of new Pokedex options so you can see Pokemon specifically by the generation they were released in."]
+},
+{
+	"version" : "2.01",
+	"date" : "2014-02-21",
+	"changes" : ["Fixed a bug that occurs while wiping. Still haven't fixed the bug caused when loading the new file formate from the old."]
+},
+{
+	"version" : "2.00",
+	"date" : "2014-02-20",
+	"changes" : ["Pokemon saves may stop working at this point. I've upgraded the system so that we now support the gray-pokeball, pokeball, great ball and ultra ball. ",
+	"This should be useful for people who are concerned about tracking Kalos-dex and non-Kalos dex weirdness.",
+	"Version number stuff now works slightly differently."]
+},
+{
+	"version" : "1.08",
+	"date" : "2014-01-24",
+	"changes" : ["Added a new Breeders dex. This pokedex should list the lowest evolutionary stage of a pokemon species that can be used for breeding purposes. If you have all of these, you should be able to breed all breedable pokemon. This doesn't use National dex numbers as the numbering system can be used for sorting boxes (i.e. 1-30 in Breeding Box 1 etc.)"]
+},
+{
+	"version" : "1.071",
+	"date" : "2014-01-20",
+	"changes" : ["Fixed bugs in Firefox."]
+},
+{
+	"version" : "1.07",
+	"date" : "2014-01-20",
+	"changes" : ["Pokedex now contains links to the following external sites: Bulbapedia, Serebii, Smogon (BW) (The ones I use most often). A button on the dex menu will allow you to switch which site is currently being used. The links are the small [*] next to the pokemon's name."]
+},
+{
+	"version" : "1.061",
+	"date" : "16-01-2014",
+	"changes" : ["There is now an alphabetical pokedex that lists pokemon that are allowed to be used in the VGC"]
+},
+{
+	"version" : "1.06",
+	"date" : "14-01-2014",
+	"changes" : ["Removed the Uncaught pokedex option",
+	"Added a new row underneath the pokedex options. Show All-Uncaught will now switch between showing All or all uncaught pokemon from that regional pokedex.",
+	"Moved the poxedex ordering methods into the new row so that it can be triggered from the pokedex view"]
+},
+{
+	"version" : "1.051",
+	"date" : "12-12-2013",
+	"changes" : ["Fixed bug where changing Pokedex ordering would cause the site to change back to the National dex"]
+},
+{
+	"version" : "1.05",
+	"date" : "12-12-2013",
+	"changes" : ["Pokedex now supports two ordering methods. One ordering down columns (Classic), one ordering the same way the Pokemon XY pokedex does.",
+	"Also extended how long the cookies last for. (Until 2029 now)"]
+},
+{
+	"version" : "1.041",
+	"date" : "28-11-2013",
+	"changes" : ["Shrank pokemon images to make loading faster.",
+	"Added a javascript warning",
+	"Minor update to make smaller screens work (slightly) better"]
+},
+{
+	"version" : "1.04",
+	"date" : "27-11-2013",
+	"changes" : ["Added Tweet buttons on the stats page. You can now Tweet pokedex progress",
+	"This updates page is now updated when you open it to show new updates.",
+	"Added version number to bottom right hand corner so you know what version you're running.",
+	"Changed the way that checkboxes work. We don't override the checkbox image anymore. We just use images and have custom stuff on there.",
+	"Some minor alignment fixes for images.",
+	"Added a background",
+	"Added a short loading message because my server is a little slow"]
+},
+{
+	"version" : "1.03",
+	"date" : "26-11-2013",
+	"changes" : ["There's now a stats page so that you can check your Pokedex completion"]
+},
+{
+	"version" : "1.02",
+	"date" : "26-11-2013",
+	"changes" : ["Pokeballs now displayed instead of checkboxes",
+	"Added this brand new Updates page"]
+},
+{
+	"version" : "1.01",
+	"date" : "26-11-2013",
+	"changes" : ["Made the menus look much nicer",
+	"Added a new navigation bar at the top",
+	"Moved Save, Load and Wipe buttons into Menu bar."]
+},
+{
+	"version" : "1.00",
+	"date" : "26-11-2013",
+	"changes" : ["Initial release"]
+}
+]

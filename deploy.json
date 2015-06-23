@@ -1,0 +1,149 @@
+{
+	"connectionFile" : "./connection",
+	"directories" : [
+		{
+			"path": ".",
+			"uploadPath" : "",
+			"files" : [
+				"app.css",
+				"app.js",
+				"cookies.min.js",
+				"index.html",
+				"pokething.css",
+				"update.txt"
+			],
+			"directories" : [
+				{
+					"path": "app",
+					"uploadPath" : "app",
+					"files" : [
+					],
+					"directories" : [
+						{
+							"path" : "abilities",
+							"uploadPath" : "abilities",
+							"files" : [
+								"abilities.html",
+								"abilities.js",
+								"abilityrow.html",
+								"abilityrow.js",
+								"abilityset.js",
+								"abilityset.html"
+							]
+						},
+						{
+							"path" : "breeding",
+							"uploadPath" : "breeding",
+							"files" : [
+								"breeding.html",
+								"breeding.js",
+								"breedPair.html",
+								"breedPair.js",
+								"breedset.js",
+								"breedset.html"
+							]
+						},
+						{
+							"path" : "ditto",
+							"uploadPath" : "ditto",
+							"files" : [
+								"ditto.html",
+								"ditto.js",
+								"dittostat.html",
+								"dittostat.js"
+							]
+						},
+						{
+							"path" : "header",
+							"uploadPath" : "header",
+							"files" : [
+								"directives.js",
+								"footer.html",
+								"header.html"
+							]
+						},
+						{
+							"path" : "menu",
+							"uploadPath" : "menu",
+							"files" : [
+								"menu.html",
+								"menu.js"
+							]
+						},
+						{
+							"path" : "pokedex",
+							"uploadPath" : "pokedex",
+							"files" : [
+								"dexentry.html",
+								"dexentry.js",
+								"pokedex.html",
+								"pokedex.js"
+							]
+						},
+						{
+							"path" : "stats",
+							"uploadPath" : "stats",
+							"files" : [
+								"stats.html",
+								"stats.js"
+							]
+						},
+						{
+							"path" : "tools",
+							"uploadPath" : "tools",
+							"files" : [
+								"tools.html",
+								"tools.js"
+							]
+						},
+						{
+							"path" : "updates",
+							"uploadPath" : "updates",
+							"files" : [
+								"updates.html",
+								"updates.js"
+							]
+						}
+
+					]
+				},
+				{
+					"path" : "data",
+					"uploadPath" : "data",
+					"files" : [
+						"abilityStorage.js",
+						"breedStorage.js",
+						"data.js",
+						"dexStorage.js",
+						"dittoStorage.js"
+						
+					]
+				},
+				{
+					"path" : "img",
+					"uploadPath" : "img",
+					"files" : [
+						"bg.png",
+						"flabebe.png",
+						"pokeball0.png",
+						"pokeball1.png",
+						"pokeball2.png",
+						"pokeball3.png",
+						"vulpix.png"
+					]
+				},
+				{
+					"path" : "lib",
+					"uploadPath" : "lib",
+					"files" : [
+						"angular.min.js",
+						"angular-route.min.js"
+					]
+				}
+			]
+		}
+	
+	]
+
+
+}
