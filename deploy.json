@@ -1,5 +1,9 @@
 {
-	"connectionFile" : "./connection",
+	"packager" : {
+		"name" : "EasyPackage.Packagers.FtpPackager",
+		"settings" : "./connection",
+		"outputFolder" : "d:/dexOut"
+	},
 	"directories" : [
 		{
 			"path": ".",
@@ -81,6 +85,16 @@
 							]
 						},
 						{
+							"path" : "egggroups",
+							"uploadPath" : "egggroups",
+							"files" : [
+								"egggroups.html",
+								"egggroups.js",
+								"eggentry.html",
+								"eggentry.js"
+							]
+						},
+						{
 							"path" : "stats",
 							"uploadPath" : "stats",
 							"files" : [
@@ -114,8 +128,10 @@
 						"abilityStorage.js",
 						"breedStorage.js",
 						"data.js",
+						"eggStorage.js",
 						"dexStorage.js",
-						"dittoStorage.js"
+						"dittoStorage.js",
+						"gameStorage.js"
 						
 					]
 				},

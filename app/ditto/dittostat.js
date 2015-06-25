@@ -22,7 +22,7 @@ angular.module('myApp.dittoStat', ['ngRoute' ])
 .directive('dittoStat', function () {
 	return {
 		scope: { resource: '=', natureid: '@', title: '@'},
-		templateUrl: '/app/ditto/dittoStat.html',
+		templateUrl: '/app/ditto/dittostat.html',
 		controller: 'DittoStatCtrl',
 		link: function ($scope, element) {
 			

@@ -1,0 +1,12 @@
+<tools-header></tools-header>
+<div class="outerRegion">
+	<div class="innerRegion">
+		<h1>Egg Groups</h1>
+		Track egg groups where you have a perfect male pokemon for breeding with.
+		<div class="block-12">
+			<div ng-repeat="group in eggGroups" class="checkboxWrapper">
+				<div egg-entry groupid="{{ group.id }}" title="{{ group.name }}"> </entry>
+			</div>
+		</div>
+	</div>
+</div>

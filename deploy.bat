@@ -1,1 +1,1 @@
-tools\WebDeploy deploy.json
+tools\EasyPackageExecutable deploy.json

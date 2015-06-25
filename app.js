@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  'myApp.header',
   'myApp.pokedex',
   'myApp.stats',
   'myApp.menu',
@@ -16,7 +17,9 @@ angular.module('myApp', [
   'myApp.dittoStat',
   'myApp.abilities',
   'myApp.abilitySet',
-  'myApp.abilityRow'
+  'myApp.abilityRow',
+  'myApp.eggEntry',
+  'myApp.eggGroups'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/pokedex'});

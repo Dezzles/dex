@@ -1,7 +1,31 @@
 [
 {
+	"version" : "3.12",
+	"date" : "2015-06-25",
+	"changes" : [
+		"Added section for tracking egg groups",
+		"Added descriptions to tools
+	]
+},
+{
+	"version" : "3.11",
+	"date" : "2015-06-24",
+	"changes" : [
+			"Application now supports multiple games, one of each (XYORAS)"
+	]
+},
+{
+	"version" : "3.10",
+	"date" : "2015-06-23",
+	"changes" : [
+		"Various changes to UI elements",
+		"Removed some unused items in the CSS files",
+		"Improved mobile support?"
+	]
+},
+{
 	"version" : "3.00",
-	"date" : "2015-06-30",
+	"date" : "2015-06-23",
 	"changes" : ["Transitioned over to AngularJS to make a bunch of stuff much easier.",
 	"Dates now stored in ISO standard",
 	"Added Hoopa",
@@ -11,7 +35,7 @@
 	"Added breeding section to tools",
 	"Fixed issue with drop down alignments (finally)",
 	"Added Ditto nature tracking tool",
-	"Added hidden power tracking tool"]
+	"Added hidden ability tracking tool"]
 },
 {
 	"version" : "2.10",

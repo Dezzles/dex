@@ -1,15 +1,26 @@
 function DittoStorage ( ) {
 	this.title = "dittos";
-	this.data = Cookies.get(this.title);
-	if (this.data == null)
-	{
-		this.data = "000000000000000000000000000000000000000000000000000000000000";
-		Cookies.set(this.title, this.data, new Date(01,01,2029));
+	
+	this.getData = function() {
+		var game = new GameStorage();
+		var data = Cookies.get(this.title + "." + game.currentGame());
+		if (data == null)
+		{
+			data = "000000000000000000000000000000000000000000000000000000000000";
+			this.saveData( data )
+		}
+		return data;
+	}
+	
+	this.reset = function() {
+		var data = "000000000000000000000000000000000000000000000000000000000000";
+		this.saveData( data );
 	}
 	
 	this.statValue = function ( slot )
 	{
-		return parseInt(this.data[ slot ]);
+		var data = this.getData();
+		return parseInt(data[ slot ]);
 	}
 	
 	this.update = function ( slot, newValue )
@@ -17,11 +28,18 @@ function DittoStorage ( ) {
 		if (newValue == 2){
 			newValue = 0;
 		}
-		this.data = replaceAt( this.data, slot, "" + newValue );
-		Cookies.set(this.title, this.data, new Date(1,1,2029));
+		var data = this.getData();
+		data = replaceAt( data, slot, "" + newValue );
+		this.saveData( data );
 	}
 	
 	function replaceAt( str, index, character) {
 		return str.substr(0, index) + character + str.substr(index+character.length);
 	}
+	
+	this.saveData = function( data ) {
+		var game = new GameStorage();
+		Cookies.set( this.title + "." + game.currentGame(), data, new Date(01,01,2029) );
+	}
+
 }

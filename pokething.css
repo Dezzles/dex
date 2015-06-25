@@ -12,6 +12,7 @@ body
 	border: 3px black solid;
 	margin: 0 12.5% 0 12.5%;
 	width: 75%;
+	min-width: 450px;
 }
 .center h1 
 {
@@ -91,6 +92,7 @@ div
 .checkboxWrapper{
 	min-height: 30px;
 	width: 20%;
+	min-width: 160px;
 	display: inline-block;
 }
 
@@ -196,21 +198,7 @@ input[type=checkbox]:checked:before { background: url("img/pokeball.png") #fff; 
     z-index:5;
     padding:0;
 }
-#main-nav .subnav li {
-    display: block;
-    border: solid 1px black;
-    margin:0;
-	width: 100%;
-}
-#main-nav .subnav li a {
-    color: #333;
-    height:20px;
-	width: 100%;
-	
-}
-#main-nav .subnav li a:hover {
-    background: RGB(200,200,200);
-}
+
 #nav-primary {
     list-style-type: none;
     margin: 0;
@@ -223,11 +211,10 @@ input[type=checkbox]:checked:before { background: url("img/pokeball.png") #fff; 
     float: left;
     position: relative;
 	height: 40px;
-	width: 19.5%;
+	min-width: 220px;
 }
 #nav-primary li a {
-	width: 100%;
-    float: left;
+   float: left;
     color: #000;
     text-align: center;
     padding-top: 14px;

@@ -337,3 +337,19 @@ var hiddenAbilities =
 {id: 296, items:[{ id: 714, ability: 156, note: '' },{ id: 715, ability: 156, note: '' }]}
 ];
 var abilities = ['Air Lock','Arena Trap','Battle Armor','Blaze','Cacophony','Chlorophyll','Clear Body','Cloud Nine','Color Change','Compound Eyes','Cute Charm','Damp','Drizzle','Drought','Early Bird','Effect Spore','Flame Body','Flash Fire','Forecast','Guts','Huge Power','Hustle','Hyper Cutter','Illuminate','Immunity','Inner Focus','Insomnia','Intimidate','Keen Eye','Levitate','Lightning Rod','Limber','Liquid Ooze','Magma Armor','Magnet Pull','Marvel Scale','Minus','Natural Cure','Oblivious','Overgrow','Own Tempo','Pickup','Plus','Poison Point','Pressure','Pure Power','Rain Dish','Rock Head','Rough Skin','Run Away','Sand Stream','Sand Veil','Serene Grace','Shadow Tag','Shed Skin','Shell Armor','Shield Dust','Soundproof','Speed Boost','Static','Stench','Sticky Hold','Sturdy','Suction Cups','Swarm','Swift Swim','Synchronize','Thick Fat','Torrent','Trace','Truant','Vital Spirit','Volt Absorb','Water Absorb','Water Veil','White Smoke','Wonder Guard','Adaptability','Aftermath','Anger Point','Anticipation','Bad Dreams','Download','Dry Skin','Filter','Flower Gift','Forewarn','Frisk','Gluttony','Heatproof','Honey Gather','Hydration','Ice Body','Iron Fist','Klutz','Leaf Guard','Magic Guard','Mold Breaker','Motor Drive','Multitype','No Guard','Normalize','Poison Heal','Quick Feet','Reckless','Rivalry','Scrappy','Simple','Skill Link','Slow Start','Sniper','Snow Cloak','Snow Warning','Solar Power','Solid Rock','Stall','Steadfast','Storm Drain','Super Luck','Tangled Feet','Technician','Tinted Lens','Unaware','Unburden','Analytic','Big Pecks','Contrary','Cursed Body','Defeatist','Defiant','Flare Boost','Friend Guard','Harvest','Healer','Heavy Metal','Illusion','Imposter','Infiltrator','Iron Barbs','Justified','Light Metal','Magic Bounce','Moody','Moxie','Multiscale','Mummy','Overcoat','Pickpocket','Poison Touch','Prankster','Rattled','Regenerator','Sand Force','Sand Rush','Sap Sipper','Sheer Force','Telepathy','Teravolt','Toxic Boost','Turboblaze','Unnerve','Victory Star','Weak Armor','Wonder Skin','Zen Mode','Aerilate','Aroma Veil','Aura Break','Bulletproof','Cheek Pouch','Competitive','Dark Aura','Delta Stream','Desolate Land','Fairy Aura','Flower Veil','Fur Coat','Gale Wings','Gooey','Grass Pelt','Magician','Mega Launcher','Parental Bond','Pixilate','Primordial Sea','Protean','Refrigerate','Stance Change','Strong Jaw','Sweet Veil','Symbiosis','Tough Claws'];
+
+var eggGroups = [ { id: 0, name: 'Monster' },
+{ id: 1, name: 'Water 1' },
+{ id: 2, name: 'Bug' },
+{ id: 3, name: 'Flying' },
+{ id: 4, name: 'Field' },
+{ id: 5, name: 'Fairy' },
+{ id: 6, name: 'Grass' },
+{ id: 7, name: 'Human-Like' },
+{ id: 8, name: 'Water 3' },
+{ id: 9, name: 'Mineral' },
+{ id: 10, name: 'Amorphous' },
+{ id: 11, name: 'Water 2' },
+{ id: 12, name: 'Ditto' },
+{ id: 13, name: 'Dragon' }
+];
