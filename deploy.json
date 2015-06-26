@@ -128,7 +128,7 @@
 						"abilityStorage.js",
 						"breedStorage.js",
 						"data.js",
-						"eggStorage.js",
+						"eggGroupStorage.js",
 						"dexStorage.js",
 						"dittoStorage.js",
 						"gameStorage.js"

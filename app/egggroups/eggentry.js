@@ -22,7 +22,7 @@ angular.module('myApp.eggEntry', ['ngRoute' ])
 .directive('eggEntry', function () {
 	return {
 		scope: { resource: '=', groupid: '@', title: '@'},
-		templateUrl: '/app/egggroups/eggEntry.html',
+		templateUrl: '/app/egggroups/eggentry.html',
 		controller: 'EggEntryCtrl',
 		link: function ($scope, element) {
 			
