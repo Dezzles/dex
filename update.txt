@@ -1,10 +1,21 @@
 [
 {
+	"version" : "3.20",
+	"date" : "2015-06-29",
+	"changes" : [
+		"Reworked a lot of the save code to reduce the amount of repeated code",
+		"Abilities page now supports a share link",
+		"Pokedex page now supports a share link",
+		"When viewing a shared Pokedex you can view different sorts of pokedex groups using the code",
+		"Fixed an issue where Bulbapedia link was not working correctly"
+	]
+},
+{
 	"version" : "3.12",
 	"date" : "2015-06-25",
 	"changes" : [
 		"Added section for tracking egg groups",
-		"Added descriptions to tools
+		"Added descriptions to tools"
 	]
 },
 {

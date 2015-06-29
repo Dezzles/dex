@@ -7,13 +7,13 @@ angular.module('myApp.dittoStat', ['ngRoute' ])
 	$scope.Storage = new DittoStorage( $scope.id );
 	
 	$scope.updateStat = function( ) {
-		var current = $scope.Storage.statValue( $scope.natid );
+		var current = $scope.Storage.getValue( $scope.natid );
 		current = current + 1;
-		$scope.Storage.update( $scope.natid, current);
+		$scope.Storage.setValue( $scope.natid, current);
 	}
 	
 	$scope.getStat = function ( ) {
-		return  $scope.Storage.statValue( $scope.natid );
+		return  $scope.Storage.getValue( $scope.natid );
 	}
 	
 

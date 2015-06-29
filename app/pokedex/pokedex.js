@@ -8,6 +8,16 @@ angular.module('myApp.pokedex', ['ngRoute' ])
     controller: 'PokedexCtrl'
   });
 
+  $routeProvider.when('/dexview/:code', {
+    templateUrl: 'app/pokedex/pokedex.html',
+    controller: 'PokedexCtrl'
+  });
+
+  $routeProvider.when('/dexview/:code/:dex', {
+    templateUrl: 'app/pokedex/pokedex.html',
+    controller: 'PokedexCtrl'
+  });
+
   $routeProvider.when('/pokedex/:dex', {
     templateUrl: 'app/pokedex/pokedex.html',
     controller: 'PokedexCtrl'
@@ -17,6 +27,17 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 ])
 
 .controller('PokedexCtrl', function($scope, $routeParams ) {
+	$scope.viewType = 'pokedex'
+	if ($routeParams['code'] == null) {
+		var storage = new DexStorage();
+		$scope.code = storage.getCode();
+	}
+	else {
+		$scope.code = $routeParams['code'];
+		$scope.viewType = 'dexview/'+ $scope.code;
+		$scope.hasCode = true;
+	}
+	
 	$scope.SaveData = new DexStorage( );
 	$scope.Pokemon = AllData.allPokemon;
 	$scope.dexTitle = $routeParams.dex;
@@ -29,7 +50,10 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 			$scope.Pokedex = AllData.pokedexes[ key ] ;
 		}
 	}
-	
+	$scope.updateCode = function() {
+		var storage = new DexStorage();
+		$scope.code = storage.getCode();
+	}
 
 });
 

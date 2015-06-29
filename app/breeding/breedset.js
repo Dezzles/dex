@@ -6,13 +6,13 @@ angular.module('myApp.breedSet', ['ngRoute' ])
 	var id = $scope.id;
 	$scope.Storage = new BreedStorage( $scope.id );
 	$scope.updateValue = function( val ) {
-		var current = $scope.Storage.statValue( val );
+		var current = $scope.Storage.getValue( val );
 		current = current + 1;
-		$scope.Storage.update( val, current);
+		$scope.Storage.setValue( val, current);
 	}
 	
 	$scope.getValue = function ( val) {
-		return  $scope.Storage.statValue( val );
+		return  $scope.Storage.getValue( val );
 	}
 	
 

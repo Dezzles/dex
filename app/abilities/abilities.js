@@ -7,6 +7,10 @@ angular.module('myApp.abilities', ['ngRoute' ])
     templateUrl: 'app/abilities/abilities.html',
     controller: 'AbilitiesCtrl'
   });
+  $routeProvider.when('/tools/abilities/:code', {
+    templateUrl: 'app/abilities/abilities.html',
+    controller: 'AbilitiesCtrl'
+  });
 
 }
 
@@ -14,5 +18,17 @@ angular.module('myApp.abilities', ['ngRoute' ])
 
 .controller('AbilitiesCtrl', function($scope, $routeParams ) {	
 	$scope.abilitySet = hiddenAbilities;
+	if ($routeParams['code'] == null) {
+		var storage = new AbilityStorage();
+		$scope.code = storage.getCode();
+	}
+	else {
+		$scope.code = $routeParams['code'];
+	}
+	
+	$scope.updateCode = function() {
+		var storage = new AbilityStorage();
+		$scope.code = storage.getCode();
+	}
 });
 

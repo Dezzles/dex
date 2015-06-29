@@ -10,8 +10,8 @@ angular.module('myApp.header', [])
 	
 	$scope.changeGame = function() {
 		var game = new GameStorage();
-		var current = game.currentGame();
-		game.updateGame( current + 1 );
+		var current = game.getValue();
+		game.setValue( current + 1 );
 	}
 }])
 .directive('menuHeader', function () {

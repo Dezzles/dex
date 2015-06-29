@@ -1,10 +1,6 @@
 function GameStorage ( ) {
 	this.title = "game";
-
-	this.saveData = function( data ) {
-		Cookies.set( this.title, data, new Date(01,01,2029) );
-	}
-
+	this.saveBits = 2;
 
 	var data = Cookies.get(this.title);
 	this.gameNames = [
@@ -13,26 +9,26 @@ function GameStorage ( ) {
 		"Omega Ruby",
 		"Alpha Sapphire"
 	]
-	if (data == null) {
-		data = "0";
-		this.saveData(data);
-	}
 	
 	this.gameName = function() {
-		var game = this.currentGame();
+		var game = this.getValue();
 		return this.gameNames[ game ];
 	}
+
 	this.reset = function() {
 		this.saveData("0");
 	}
 	
-	this.currentGame = function ( )
+	this.getValue = function ( )
 	{
 		var data = Cookies.get(this.title);
+		if (data == null) {
+			this.reset();
+		}
 		return parseInt(data);
 	}
 	
-	this.updateGame = function ( newValue )
+	this.setValue = function ( newValue )
 	{
 		var data = Cookies.get(this.title);
 		if (newValue == 4){
@@ -42,8 +38,8 @@ function GameStorage ( ) {
 		this.saveData(data);
 	}
 	
-	function replaceAt( str, index, character) {
-		return str.substr(0, index) + character + str.substr(index+character.length);
+	this.saveData = function( data ) {
+		var game = new GameStorage();
+		Cookies.set( this.title, data, new Date(01,01,2029) );
 	}
-	
 }

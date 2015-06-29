@@ -1,6 +1,8 @@
 function DexStorage ( ) {
 	this.title = "pokemon";
-
+	this.maxValue = 3;
+	this.saveBits = 2;
+	BaseStorage(this);
 	this.DecryptCode = function() {
 		var save = Cookies.get("code");
 		if (save == null)
@@ -26,22 +28,6 @@ function DexStorage ( ) {
 		Cookies.set("code", null);
 	}
 	
-	this.getData = function() {
-		var game = new GameStorage();
-		var data = Cookies.get(this.title + "." + game.currentGame());
-		if (data == null) {
-			data = "0";
-			var u = 0;
-			this.DecryptCode();
-			while (u < 1000 ) {
-				data = data + "0";
-				u = u + 1;
-			}
-			this.saveData(data);
-		}
-		return data;
-	}
-	
 	this.reset = function() {
 		var data = "0";
 		var u = 0;
@@ -52,28 +38,4 @@ function DexStorage ( ) {
 		this.saveData(data);
 	}
 	
-	this.pokemonValue = function ( dexId ){
-		var data = this.getData();
-		return parseInt(data[ dexId ]);
-	}
-	
-	this.update = function ( dexId, newValue ) {
-		if (newValue == 4){
-			newValue = 0;
-		}
-		var data = this.getData();
-		data = replaceAt( data, dexId, "" + newValue );
-		this.saveData(data);
-	}
-	
-	this.saveData = function( data ) {
-		var game = new GameStorage();
-		Cookies.set( this.title + "." + game.currentGame(), data, new Date(01,01,2029) );
-	}
-
-	function replaceAt( str, index, character) {
-		return str.substr(0, index) + character + str.substr(index+character.length);
-	}
-	
-
 }
