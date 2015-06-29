@@ -1,6 +1,6 @@
 {
 	"packager" : {
-		"name" : "EasyPackage.Packagers.FtpPackager",
+		"name" : "EasyPackage.Packagers.CopyPackager",
 		"settings" : "./connection",
 		"outputFolder" : "d:/dexOut"
 	},
@@ -127,11 +127,14 @@
 					"files" : [
 						"abilityStorage.js",
 						"breedStorage.js",
+						"baseStorage.js",
+						"codeStorage.js",
 						"data.js",
 						"eggGroupStorage.js",
 						"dexStorage.js",
 						"dittoStorage.js",
-						"gameStorage.js"
+						"gameStorage.js",
+						"baseStorage.js"
 						
 					]
 				},

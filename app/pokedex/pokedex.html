@@ -1,3 +1,4 @@
+
 <center>
 	<div id="main-nav">
 		<ul id="nav-primary">
@@ -5,14 +6,24 @@
 				<a title="Region">{{ group.name }}</a>
 				<ul class="subnav">
 					<li ng-repeat="dex in group.dexes">
-						<a href="#/pokedex/{{ dex }}">{{ dex }}</a>
+						<a href="#/{{ viewType }}/{{ dex }}">{{ dex }}</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
 	</div>
 </center>
+<div class="innerRegion" ng-if="hasCode">
+	Select Pokedex to leave shared pokedex
+</div>
+<div class="innerRegion">
+	<div ng-repeat="pkmn in Pokedex.pokemon" class="checkboxWrapper" >
+		<div dex-entry id="pkmn" dex="Pokedex"> </div>
+	</div>
+</div>
 
-<div ng-repeat="pkmn in Pokedex.pokemon" class="checkboxWrapper" >
-	<div dex-entry id="pkmn" dex="Pokedex"> </div>
+<div class="innerRegion">
+	<center>
+		Share using this <a href="/#/dexview/{{ code }}">link</a>
+	</center>
 </div>

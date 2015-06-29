@@ -9,7 +9,7 @@ angular.module('myApp.eggEntry', ['ngRoute' ])
 		
 		var current = $scope.Storage.getValue( $scope.id );
 		current = current + 1;
-		$scope.Storage.update( $scope.id, current);
+		$scope.Storage.setValue( $scope.id, current);
 	}
 	
 	$scope.getValue  = function ( ) {
