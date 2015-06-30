@@ -1,8 +1,8 @@
 function AbilityStorage ( ) {
 	this.title = "abilities";
-	this.saveBits = 1;
+	this.saveBits = 2;
 	this.minLength = 400;
-	this.maxValue = 1;
+	this.maxValue = 2;
 	BaseStorage(this);
 	
 	this.reset = function() {

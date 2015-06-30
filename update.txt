@@ -1,5 +1,14 @@
 [
 {
+	"version" : "3.21",
+	"date" : "2015-06-29",
+	"changes" : [
+		"Abilities now supports 3 different settings",
+		"Added number and text alignment to ability groups",
+		"Merged Nidoran groups in Hidden Abilities section"
+	]
+},
+{
 	"version" : "3.20",
 	"date" : "2015-06-29",
 	"changes" : [

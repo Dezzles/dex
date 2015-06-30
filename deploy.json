@@ -1,6 +1,6 @@
 {
 	"packager" : {
-		"name" : "EasyPackage.Packagers.CopyPackager",
+		"name" : "EasyPackage.Packagers.FtpPackager",
 		"settings" : "./connection",
 		"outputFolder" : "d:/dexOut"
 	},
