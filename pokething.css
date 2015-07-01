@@ -250,3 +250,22 @@ input[type=checkbox]:checked:before { background: url("img/pokeball.png") #fff; 
 	vertical-align: middle;
 
 }
+
+.standard-box-right {
+	border: 1px black solid;
+    float: right;
+	display: inline-block;
+    position: relative;
+	height: 40px;
+	min-width: 220px;
+}
+
+.standard-box-link {
+	float: left;
+	color: #000;
+	text-align: center;
+	padding-top: 14px;
+	line-height: 16px;
+	width: 100%;
+	text-decoration:none;
+}

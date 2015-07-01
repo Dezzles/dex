@@ -11,6 +11,10 @@ angular.module('myApp.abilities', ['ngRoute' ])
     templateUrl: 'app/abilities/abilities.html',
     controller: 'AbilitiesCtrl'
   });
+  $routeProvider.when('/tools/abilities/:code/:view', {
+    templateUrl: 'app/abilities/abilities.html',
+    controller: 'AbilitiesCtrl'
+  });
 
 }
 
@@ -24,6 +28,15 @@ angular.module('myApp.abilities', ['ngRoute' ])
 		"Unmarked",
 		"Marked"
 	]
+	var view = $routeParams['view'];
+	if (view != null) {
+		if ( view == "All")
+			$scope.mode = 0;
+		else if (view == "Unmarked" )
+			$scope.mode = 1;
+		else if (view == "Marked" )
+			$scope.mode = 2;
+	}
 		
 	if ($routeParams['code'] == null) {
 		$scope.storage = new AbilityStorage();
