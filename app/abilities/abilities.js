@@ -7,11 +7,11 @@ angular.module('myApp.abilities', ['ngRoute' ])
     templateUrl: 'app/abilities/abilities.html',
     controller: 'AbilitiesCtrl'
   });
-  $routeProvider.when('/tools/abilities/:code', {
+  $routeProvider.when('/view/abilities/:code', {
     templateUrl: 'app/abilities/abilities.html',
     controller: 'AbilitiesCtrl'
   });
-  $routeProvider.when('/tools/abilities/:code/:view', {
+  $routeProvider.when('/view/abilities/:code/:view', {
     templateUrl: 'app/abilities/abilities.html',
     controller: 'AbilitiesCtrl'
   });
@@ -45,6 +45,7 @@ angular.module('myApp.abilities', ['ngRoute' ])
 	else {
 		$scope.code = $routeParams['code'];
 		$scope.storage = new CodeStorage($scope.code, 2);
+		$scope.addedNote = "Viewing - ";
 	}
 	
 	$scope.updateCode = function() {

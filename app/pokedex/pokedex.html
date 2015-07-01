@@ -13,12 +13,23 @@
 		</ul>
 	</div>
 </center>
+<div>
+	<div class="block-6">
+		<h1>{{ addedNote }}{{ dexTitle }}</h1>
+	</div>
+	<div class="standard-box-right">
+		<a class="standard-box-link" href="" ng-click="updateMode( )"> {{ text [ mode ] }}</a>
+	</div>
+	<div class="standard-box-right">
+		<a class="standard-box-link" href="/#/view/pokedex/{{ code }}/{{ dexTitle }}/{{ text[mode] }}" target="_blank" >Share</a>
+	</div>
+</div>
 <div class="innerRegion" ng-if="hasCode">
 	Select Pokedex to leave shared pokedex
 </div>
 <div class="innerRegion">
-	<div ng-repeat="pkmn in Pokedex.pokemon" class="checkboxWrapper" >
-		<div dex-entry id="pkmn" dex="Pokedex"> </div>
+	<div ng-repeat="pkmn in Pokedex.pokemon" style="display: inline-block" >
+		<div dex-entry id="pkmn" dex="Pokedex" mode="{{ mode }}"> </div>
 	</div>
 </div>
 

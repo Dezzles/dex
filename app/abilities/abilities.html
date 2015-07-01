@@ -3,10 +3,13 @@
 	<div class="innerRegion">
 		<div>
 			<div class="block-6">
-				<h1>Hidden Abilities</h1>
+				<h1>{{ addedNote }}Hidden Abilities</h1>
 			</div>
 			<div class="standard-box-right">
 				<a class="standard-box-link" href="" ng-click="updateMode( )"> {{ text [ mode ] }}</a>
+			</div>
+			<div class="standard-box-right">
+				<a class="standard-box-link" href="/#/view/abilities/{{ code }}/{{ text[mode] }}" target="_blank">Share</a>
 			</div>
 		</div>
 		Track pokemon sets where you have a pokemon (preferably female) in the group with the hidden ability.

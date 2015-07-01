@@ -1,5 +1,15 @@
 [
 {
+	"version" : "3.23",
+	"date" : "2015-07-01",
+	"changes" : [
+		"Some more performance improvements",
+		"Added functionality to hide Pokemon based on marked/not marked.",
+		"Shared link on Pokemon now supports sharing the view mode",
+		"Adjusted the links for viewing pokedex and ability view modes"
+	]
+},
+{
 	"version" : "3.22",
 	"date" : "2015-07-01",
 	"changes" : [

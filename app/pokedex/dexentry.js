@@ -19,7 +19,7 @@ angular.module('myApp.dexEntry', ['ngRoute' ])
 
 .directive('dexEntry', function () {
 	return {
-		scope: { resource: '=', id: '=' },
+		scope: { resource: '=', id: '=' , mode: '@'},
 		templateUrl: '/app/pokedex/dexentry.html',
 		controller: 'DexEntryCtrl',
 		link: function ($scope, element) {
