@@ -6,7 +6,8 @@
 		"Some more performance improvements",
 		"Added functionality to hide Pokemon based on marked/not marked.",
 		"Shared link on Pokemon now supports sharing the view mode",
-		"Adjusted the links for viewing pokedex and ability view modes"
+		"Adjusted the links for viewing pokedex and ability view modes",
+		"Titles now indicate when in viewing mode"
 	]
 },
 {
