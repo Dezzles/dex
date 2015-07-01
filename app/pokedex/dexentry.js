@@ -5,29 +5,16 @@ angular.module('myApp.dexEntry', ['ngRoute' ])
 .controller('DexEntryCtrl', function($scope, $routeParams ) {
 	var id = $scope.id;
 	$scope.Pokemon = AllData.allPokemon[id];
-	if ($routeParams['code'] == null) {
-		$scope.updateValue = function( ) {
-			var test = new DexStorage( );
-			var current = test.getValue( $scope.id );
-			test.setValue($scope.id, current + 1);
-			$scope.Pokemon = AllData.allPokemon[$scope.id];
-			$scope.$parent.updateCode();
-		}
-		
-		$scope.getValue = function () {
-			var test = new DexStorage( );
-			return test.getValue( $scope.id );
-		}
+	$scope.getValue = function () {
+		return $scope.$parent.storage.getValue( $scope.id );
 	}
-	else {
-		$scope.updateValue = function() { }
-		
-		$scope.getValue = function() { 
-			var test = new CodeStorage( $routeParams['code'], 2 );
-			return test.getValue( $scope.id );
-		}
+	$scope.updateValue = function( ) {
+		var test = $scope.$parent.storage;
+		var current = test.getValue( $scope.id );
+		test.setValue($scope.id, current + 1);
+		$scope.$parent.updateCode();
 	}
-
+		
 })
 
 .directive('dexEntry', function () {

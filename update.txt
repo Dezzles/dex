@@ -1,5 +1,13 @@
 [
 {
+	"version" : "3.22",
+	"date" : "2015-07-01",
+	"changes" : [
+		"Various performance improvements",
+		"Added functionality to hide Abilities based on marked/not marked.	"
+	]
+},
+{
 	"version" : "3.21",
 	"date" : "2015-06-29",
 	"changes" : [

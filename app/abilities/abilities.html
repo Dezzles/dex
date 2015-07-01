@@ -1,11 +1,15 @@
 <tools-header></tools-header>
 <div class="outerRegion">
 	<div class="innerRegion">
-		<h1>Hidden Abilities</h1>
+		<div>
+			<h1>Hidden Abilities</h1>
+			<div>
+				<a href="" ng-click="updateMode( )"> {{ text [ mode ] }}</a>
+			</div>
+		</div>
 		Track pokemon sets where you have a pokemon (preferably female) in the group with the hidden ability.
-		<div ng-repeat="sets in abilitySet" class="checkboxWrapper" style="width:100%;" index="$index">
-			<div ability-set set="sets"> </div>
-			<br/>
+		<div ng-repeat="sets in abilitySet" style="width:100%;" index="$index" >
+			<div ability-set set="sets" mode="{{ mode }}"> </div>
 		</div>
 	</div>
 	<div class="innerRegion">

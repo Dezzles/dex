@@ -1,4 +1,4 @@
-<div>
+<div ng-show="(getValue() == 0 && mode == 1) || (mode == 0) || (mode == 2 && getValue() > 0)">
 	<div >
 		<img name="name" ng-click="updateValue( )" src="img/pokeball{{ getValue( ) }}.png" class="checked" style="display: inline-block; height: 100%; vertical-align:top;"></img>	
 		<div style="display: inline-block; vertical-align: top;">
@@ -9,5 +9,6 @@
 				<div ability-row row="entry" pkmn="2"> </div>
 			</div>
 		</div>
+	<br/>
 	</div>
 </div>

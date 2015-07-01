@@ -29,16 +29,16 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 .controller('PokedexCtrl', function($scope, $routeParams ) {
 	$scope.viewType = 'pokedex'
 	if ($routeParams['code'] == null) {
-		var storage = new DexStorage();
-		$scope.code = storage.getCode();
+		$scope.storage = new DexStorage();
+		$scope.code = $scope.storage.getCode();
 	}
 	else {
 		$scope.code = $routeParams['code'];
+		$scope.storage = new CodeStorage( $scope.code , 2);
 		$scope.viewType = 'dexview/'+ $scope.code;
 		$scope.hasCode = true;
 	}
 	
-	$scope.SaveData = new DexStorage( );
 	$scope.Pokemon = AllData.allPokemon;
 	$scope.dexTitle = $routeParams.dex;
 	$scope.dexGroups =  AllData.dexGroupings;
@@ -51,8 +51,7 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 		}
 	}
 	$scope.updateCode = function() {
-		var storage = new DexStorage();
-		$scope.code = storage.getCode();
+		$scope.code = $scope.storage.getCode();
 	}
 
 });

@@ -29,10 +29,10 @@ function DexStorage ( ) {
 	}
 	
 	this.reset = function() {
-		var data = "0";
+		var data = [];
 		var u = 0;
 		while (u < 1000 ) {
-			data = data + "0";
+			data.push("0");
 			u = u + 1;
 		}
 		this.saveData(data);
