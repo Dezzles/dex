@@ -4,7 +4,8 @@
 	"date" : "2015-07-01",
 	"changes" : [
 		"Various performance improvements",
-		"Added functionality to hide Abilities based on marked/not marked.	"
+		"Added functionality to hide Abilities based on marked/not marked.",
+		"Shared link on Abilities now supports sharing the view mode"
 	]
 },
 {
