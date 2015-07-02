@@ -1,17 +1,24 @@
 function BaseStorage ( parent ) {
+	parent.loadedData = "";
+	
+	
 	parent.getData = function() {
 		var game = new GameStorage();
-		var data = Cookies.get(parent.title + "." + game.getValue());
-		if (data == null) {
-			parent.reset();
-			data = Cookies.get( parent.title + "." + game.getValue());
-		} 
-		return data;
+		var newData = parent.title + "." + game.getValue();
+		if (parent.loadedData != newData) {
+			parent.loadedData = newData;
+			var data = Cookies.get( newData );
+			if (data == null) {
+				parent.reset();
+				data = Cookies.get( newData );
+			}
+			parent.data = data.split("");
+		}
 	}
 		
 	parent.saveData = function( data ) {
-		var game = new GameStorage();
-		Cookies.set( parent.title + "." + game.getValue(), data, new Date(01,01,2029) );
+		var ret = data.join("");
+		Cookies.set( parent.loadedData, ret, new Date(01,01,2029) );
 	}
 	
 	function replaceAt( str, index, character) {
@@ -19,16 +26,16 @@ function BaseStorage ( parent ) {
 	}
 	
 	parent.getCode = function() {
-		var data = this.getData();
-		var codeLength = Math.ceil( data.length / ( 8 / this.saveBits ) );
+		this.getData();
+		var codeLength = Math.ceil( parent.data.length / ( 8 / this.saveBits ) );
 		var encode = new Uint8Array( codeLength + 1 );
 		for (var u in encode ) {
 			encode[u] = 0;
 		}
 		var bitoffset = 0;
 		var byteoffset = 0;
-		for (var u in data) {
-			var value = parseInt(data[u]);
+		for (var u in parent.data) {
+			var value = parseInt(parent.data[u]);
 			var t = value * Math.pow( 2, bitoffset );
 			encode[byteoffset] += t;
 			
@@ -43,17 +50,17 @@ function BaseStorage ( parent ) {
 	}
 	
 	parent.getValue = function ( slot ) {
-		var data = this.getData();
-		return parseInt(data[ slot ]);
+	parent.getData();
+		return parseInt(parent.data[ slot ]);
 	}
 	
 	parent.setValue = function ( slot, newValue ) {
 		if (newValue > parent.maxValue){
 			newValue = 0;
 		}
-		var data = parent.getData();
-		data = replaceAt( data, slot, "" + newValue );
-		parent.saveData(data);
+		parent.getData();
+		parent.data[ slot ] = newValue;
+		parent.saveData(parent.data);
 	}
 
 }

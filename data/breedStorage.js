@@ -6,7 +6,7 @@ function BreedStorage ( set ) {
 	this.reset = function() {
 		var u = 0;
 		var data;
-		data = "000000";
+		data = ["0","0","0","0","0","0"];
 		this.saveData(data);
 	}
 	

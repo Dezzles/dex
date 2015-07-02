@@ -1,5 +1,5 @@
-function EggGroupStorage ( set ) {
-	this.title = "eggGroups" + set;
+function EggGroupStorage ( ) {
+	this.title = "eggGroups";
 	this.saveBits = 1;
 	this.maxValue = 1;
 	BaseStorage(this);
@@ -7,7 +7,7 @@ function EggGroupStorage ( set ) {
 	this.reset = function() {
 		var u = 0;
 		var data;
-		data = "000000000000000000";
+		data = ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"];
 		this.saveData(data);
 	}
 		

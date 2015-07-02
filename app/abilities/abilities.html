@@ -1,16 +1,25 @@
 <tools-header></tools-header>
 <div class="outerRegion">
 	<div class="innerRegion">
-		<h1>Hidden Abilities</h1>
+		<div>
+			<div class="block-6">
+				<h1>{{ addedNote }}Hidden Abilities</h1>
+			</div>
+			<div class="standard-box-right">
+				<a class="standard-box-link" href="" ng-click="updateMode( )"> {{ text [ mode ] }}</a>
+			</div>
+			<div class="standard-box-right">
+				<a class="standard-box-link" href="/#/view/abilities/{{ code }}/{{ text[mode] }}" target="_blank">Share</a>
+			</div>
+		</div>
 		Track pokemon sets where you have a pokemon (preferably female) in the group with the hidden ability.
-		<div ng-repeat="sets in abilitySet" class="checkboxWrapper" style="width:100%;" index="$index">
-			<div ability-set set="sets"> </div>
-			<br/>
+		<div ng-repeat="sets in abilitySet" style="width:100%;" index="$index" >
+			<div ability-set set="sets" mode="{{ mode }}"> </div>
 		</div>
 	</div>
 	<div class="innerRegion">
 		<center>
-			Share using this <a href="/#/tools/abilities/{{ code }}">link</a>
+			Share using this <a href="/#/tools/abilities/{{ code }}/{{ text[mode] }}">link</a>
 		</center>
 	</div>
 </div>

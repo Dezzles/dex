@@ -8,17 +8,17 @@ angular.module('myApp.pokedex', ['ngRoute' ])
     controller: 'PokedexCtrl'
   });
 
-  $routeProvider.when('/dexview/:code', {
+  $routeProvider.when('/view/pokedex/:code', {
     templateUrl: 'app/pokedex/pokedex.html',
     controller: 'PokedexCtrl'
   });
 
-  $routeProvider.when('/dexview/:code/:dex', {
+  $routeProvider.when('/view/pokedex/:code/:dex', {
     templateUrl: 'app/pokedex/pokedex.html',
     controller: 'PokedexCtrl'
   });
 
-  $routeProvider.when('/pokedex/:dex', {
+  $routeProvider.when('/view/pokedex/:code/:dex/:view', {
     templateUrl: 'app/pokedex/pokedex.html',
     controller: 'PokedexCtrl'
   });
@@ -29,16 +29,33 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 .controller('PokedexCtrl', function($scope, $routeParams ) {
 	$scope.viewType = 'pokedex'
 	if ($routeParams['code'] == null) {
-		var storage = new DexStorage();
-		$scope.code = storage.getCode();
+		$scope.storage = new DexStorage();
+		$scope.code = $scope.storage.getCode();
 	}
 	else {
 		$scope.code = $routeParams['code'];
-		$scope.viewType = 'dexview/'+ $scope.code;
+		$scope.storage = new CodeStorage( $scope.code , 2);
+		$scope.viewType = 'view/pokedex/'+ $scope.code;
 		$scope.hasCode = true;
+		$scope.addedNote = "Viewing - "
 	}
-	
-	$scope.SaveData = new DexStorage( );
+
+	$scope.mode = 0;
+	$scope.text = [ 
+		"All",
+		"Unmarked",
+		"Marked"
+	]
+	var view = $routeParams['view'];
+	if (view != null) {
+		if ( view == "All")
+			$scope.mode = 0;
+		else if (view == "Unmarked" )
+			$scope.mode = 1;
+		else if (view == "Marked" )
+			$scope.mode = 2;
+	}
+
 	$scope.Pokemon = AllData.allPokemon;
 	$scope.dexTitle = $routeParams.dex;
 	$scope.dexGroups =  AllData.dexGroupings;
@@ -51,8 +68,15 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 		}
 	}
 	$scope.updateCode = function() {
-		var storage = new DexStorage();
-		$scope.code = storage.getCode();
+		$scope.code = $scope.storage.getCode();
+	}
+	
+	$scope.updateMode = function() {
+		$scope.mode += 1;
+		if ($scope.mode == 3) {
+			$scope.mode = 0;
+		}
+	
 	}
 
 });
