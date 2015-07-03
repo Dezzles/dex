@@ -99,7 +99,9 @@
 							"uploadPath" : "stats",
 							"files" : [
 								"stats.html",
-								"stats.js"
+								"stats.js",
+								"statblock.html",
+								"statblock.js"
 							]
 						},
 						{

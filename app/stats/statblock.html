@@ -1,0 +1,5 @@
+<div>
+	<div class="StatItem">{{ ::dex.name }} completion: </div>		
+	<div class="StatItem"><div class="statBlock" >{{::dex.completion}}</div> / {{ ::dex.total }} (<div class="statBlock">{{ 100 * dex.completion / dex.total | number : 0 }}</div>%)</div>
+	<br/>
+</div>
