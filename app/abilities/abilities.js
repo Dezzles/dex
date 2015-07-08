@@ -20,7 +20,7 @@ angular.module('myApp.abilities', ['ngRoute' ])
 
 ])
 
-.controller('AbilitiesCtrl', function($scope, $routeParams ) {	
+.controller('AbilitiesCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {	
 	$scope.abilitySet = hiddenAbilities;
 	$scope.mode = 0;
 	$scope.text = [ 
@@ -59,5 +59,5 @@ angular.module('myApp.abilities', ['ngRoute' ])
 		}
 	
 	}
-});
+} ]);
 

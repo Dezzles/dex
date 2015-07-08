@@ -26,7 +26,7 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 
 ])
 
-.controller('PokedexCtrl', function($scope, $routeParams ) {
+.controller('PokedexCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {
 	$scope.viewType = 'pokedex'
 	if ($routeParams['code'] == null) {
 		$scope.storage = new DexStorage();
@@ -79,5 +79,5 @@ angular.module('myApp.pokedex', ['ngRoute' ])
 	
 	}
 
-});
+} ]);
 

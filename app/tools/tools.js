@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('myApp.tools', ['ngRoute' ])
+angular.module('myApp.tools', [])
 
-.controller('ToolsCtrl', function($scope, $routeParams) {
+.controller('ToolsCtrl', function( $scope ) {
 
 })
 
@@ -10,10 +10,7 @@ angular.module('myApp.tools', ['ngRoute' ])
 	return {
 		scope: { resource: '=' },
 		templateUrl: '/app/tools/tools.html',
-		controller: 'ToolsCtrl',
-		link: function ($scope, element) {
-			 
-		}
+		controller: 'ToolsCtrl'
 	}
 }
 )

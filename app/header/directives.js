@@ -18,10 +18,7 @@ angular.module('myApp.header', [])
 	return {
 		scope: { resource: '=' },
 		templateUrl: '/app/header/header.html',
-		controller: 'HeaderCtrl',
-		link: function ($scope, element) {
-			 
-		}
+		controller: 'HeaderCtrl'
 	}
 }
 )

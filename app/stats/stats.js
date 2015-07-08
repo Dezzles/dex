@@ -11,17 +11,54 @@ angular.module('myApp.stats', ['ngRoute'])
 
 ])
 
-.controller('StatsCtrl', function($scope, $routeParams) {
-	$scope.pokedexes = AllData.pokedexes;
+.controller('StatsCtrl', [ '$scope', '$routeParams', function($scope, $routeParams) {
+	var pokedexes = AllData.pokedexes;
 	var storage = new DexStorage();
-	for (var v in $scope.pokedexes ) {
+	$scope.pokedexes = [];
+	$scope.tools = [];
+	for (var v in pokedexes ) {
 		var compl = 0;
-		for (var p in $scope.pokedexes[v].pokemon) {
-			if ( storage.pokemonValue( $scope.pokedexes[v].pokemon[p] ) ) {
+		for (var p in pokedexes[v].pokemon) {
+			if ( storage.getValue( pokedexes[v].pokemon[p] ) ) {
 				compl = compl + 1;
 			}
 		}
-		$scope.pokedexes[v].completion = compl;
+		$scope.pokedexes.push( new CreateData( pokedexes[v].name, compl, pokedexes[v].pokemon.length ) );
 	}
-});
+	storage = new AbilityStorage();
+	var compl = 0;
+	for (var v in hiddenAbilities) {
+		if (storage.getValue( hiddenAbilities[v].id ) ) {
+			compl += 1;
+		}
+	}
+	$scope.tools.push( new CreateData( 'Hidden Abilities', compl, hiddenAbilities.length) );
+	
+	storage = new DittoStorage();
+	compl = 0;
+	var counter = 0;
+	while ( counter < 25 ) {
+		if ( storage.getValue( counter ) ) {
+			compl += 1;
+		}
+		counter += 1;
+	}
+	$scope.tools.push( new CreateData( 'Dittos', compl, 25) );
+	
+	storage = new EggGroupStorage();
+	compl = 0;
+	var counter = 0;
+	for (var v in eggGroups) {
+		if (storage.getValue( eggGroups[v].id ) ) {
+			compl += 1;
+		}
+	}
+	$scope.tools.push( new CreateData( 'Egg Groups', compl, eggGroups.length) );
+	
+	function CreateData( name, completion, total ) {
+		this.name = name,
+		this.completion = completion,
+		this.total = total;
+	}
+}]);
 

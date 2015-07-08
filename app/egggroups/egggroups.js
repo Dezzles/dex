@@ -11,7 +11,7 @@ angular.module('myApp.eggGroups', ['ngRoute' ])
 
 ])
 
-.controller('EggGroupsCtrl', function($scope, $routeParams ) {	
+.controller('EggGroupsCtrl', [ '$scope', function($scope, $routeParams ) {	
 	$scope.eggGroups = eggGroups;
-});
+} ]);
 

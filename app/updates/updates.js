@@ -11,11 +11,11 @@ angular.module('myApp.updates', ['ngRoute'])
 
 ])
 
-.controller('UpdatesCtrl', function($scope, $routeParams, $http) {
+.controller('UpdatesCtrl', [ '$scope', '$http', function($scope, $http) {
 	$http.get('update.txt', { cache: false })
 		.success(function (updateResponse) {
 			$scope.UpdateResponse = updateResponse;
 		});
 
-});
+} ]);
 
