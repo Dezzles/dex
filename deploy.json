@@ -2,7 +2,7 @@
 	"clearCache" : true,
 	"packager" : {
 		"name" : "EasyPackage.Packagers.FtpPackager",
-		"settings" : "./connection",
+		"settings" : "c:/connection.txt",
 		"outputFolder" : "d:/dexOut"
 	},
 	"directories" : [
