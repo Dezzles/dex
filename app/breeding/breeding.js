@@ -16,7 +16,7 @@ angular.module('myApp.breeding', ['ngRoute' ])
 
 ])
 
-.controller('BreedingCtrl', function($scope, $routeParams ) {	
+.controller('BreedingCtrl', function( ) {	
 
 });
 

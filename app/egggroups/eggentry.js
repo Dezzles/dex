@@ -2,7 +2,7 @@
 
 angular.module('myApp.eggEntry', ['ngRoute' ])
 
-.controller('EggEntryCtrl', function($scope, $routeParams ) {
+.controller('EggEntryCtrl', [ '$scope', '$routeParams' , function($scope, $routeParams ) {
 	$scope.Storage = new EggGroupStorage(  );
 	$scope.id = parseInt($scope.groupid);
 	$scope.updateValue = function( ) {
@@ -17,16 +17,13 @@ angular.module('myApp.eggEntry', ['ngRoute' ])
 	}
 	
 
-})
+} ])
 
 .directive('eggEntry', function () {
 	return {
 		scope: { resource: '=', groupid: '@', title: '@'},
 		templateUrl: '/app/egggroups/eggentry.html',
-		controller: 'EggEntryCtrl',
-		link: function ($scope, element) {
-			
-		}
+		controller: 'EggEntryCtrl'
 	}
 }
 )

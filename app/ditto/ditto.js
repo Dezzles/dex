@@ -7,7 +7,7 @@ angular.module('myApp.ditto', ['ngRoute' ])
     templateUrl: 'app/ditto/ditto.html',
     controller: 'DittoCtrl'
   });
-}
+} 
 
 ])
 

@@ -2,7 +2,7 @@
 
 angular.module('myApp.breedPair', ['ngRoute' ])
 
-.controller('BreedPairCtrl', function($scope, $routeParams ) {
+.controller('BreedPairCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {
 	var id = $scope.setid;
 	$scope.childSet1 = id * 2;
 	$scope.childSet2 = id * 2 + 1;
@@ -18,16 +18,13 @@ angular.module('myApp.breedPair', ['ngRoute' ])
 	}
 	
 
-})
+} ])
 
 .directive('breedPair', function () {
 	return {
 		scope: { resource: '=', setid: '@', title: '@'},
 		templateUrl: '/app/breeding/breedPair.html',
-		controller: 'BreedPairCtrl',
-		link: function ($scope, element) {
-			
-		}
+		controller: 'BreedPairCtrl'
 	}
 }
 )

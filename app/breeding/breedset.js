@@ -2,7 +2,7 @@
 
 angular.module('myApp.breedSet', ['ngRoute' ])
 
-.controller('BreedSetCtrl', function($scope, $routeParams ) {
+.controller('BreedSetCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {
 	var id = $scope.id;
 	$scope.Storage = new BreedStorage( $scope.id );
 	$scope.updateValue = function( val ) {
@@ -16,16 +16,13 @@ angular.module('myApp.breedSet', ['ngRoute' ])
 	}
 	
 
-})
+} ])
 
 .directive('breedSet', function () {
 	return {
 		scope: { resource: '=', id: '@', title: '@'},
 		templateUrl: '/app/breeding/breedset.html',
-		controller: 'BreedSetCtrl',
-		link: function ($scope, element) {
-			
-		}
+		controller: 'BreedSetCtrl'
 	}
 }
 )

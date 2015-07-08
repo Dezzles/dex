@@ -1,5 +1,14 @@
 [
 {
+	"version" : "3.31",
+	"date" : "2015-07-08",
+	"changes" : [
+		"Various speed improvements",
+		"Added links to pokemon and ability pages on Bulbapedia.",
+		"Added links to egg groups pages on Bulbapedia"
+	]
+},
+{
 	"version" : "3.30",
 	"date" : "2015-07-03",
 	"changes" : [

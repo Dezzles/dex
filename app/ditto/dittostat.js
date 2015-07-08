@@ -2,7 +2,7 @@
 
 angular.module('myApp.dittoStat', ['ngRoute' ])
 
-.controller('DittoStatCtrl', function($scope, $routeParams ) {
+.controller('DittoStatCtrl',[ '$scope', '$routeParams', function($scope, $routeParams ) {
 	$scope.natid = parseInt($scope.natureid);
 	$scope.Storage = new DittoStorage( $scope.id );
 	
@@ -17,16 +17,13 @@ angular.module('myApp.dittoStat', ['ngRoute' ])
 	}
 	
 
-})
+}])
 
 .directive('dittoStat', function () {
 	return {
 		scope: { resource: '=', natureid: '@', title: '@'},
 		templateUrl: '/app/ditto/dittostat.html',
-		controller: 'DittoStatCtrl',
-		link: function ($scope, element) {
-			
-		}
+		controller: 'DittoStatCtrl'
 	}
 }
 )

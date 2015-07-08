@@ -11,7 +11,7 @@ angular.module('myApp.stats', ['ngRoute'])
 
 ])
 
-.controller('StatsCtrl', function($scope, $routeParams) {
+.controller('StatsCtrl', [ '$scope', '$routeParams', function($scope, $routeParams) {
 	var pokedexes = AllData.pokedexes;
 	var storage = new DexStorage();
 	$scope.pokedexes = [];
@@ -27,12 +27,12 @@ angular.module('myApp.stats', ['ngRoute'])
 	}
 	storage = new AbilityStorage();
 	var compl = 0;
-	for (var v in AllData.abilities) {
-		if (storage.getValue( AllData.abilities[v].id ) ) {
+	for (var v in hiddenAbilities) {
+		if (storage.getValue( hiddenAbilities[v].id ) ) {
 			compl += 1;
 		}
 	}
-	$scope.tools.push( new CreateData( 'Hidden Abilities', compl, abilities.length) );
+	$scope.tools.push( new CreateData( 'Hidden Abilities', compl, hiddenAbilities.length) );
 	
 	storage = new DittoStorage();
 	compl = 0;
@@ -60,5 +60,5 @@ angular.module('myApp.stats', ['ngRoute'])
 		this.completion = completion,
 		this.total = total;
 	}
-});
+}]);
 

@@ -2,7 +2,7 @@
 
 angular.module('myApp.abilitySet', ['ngRoute' ])
 
-.controller('AbilitySetCtrl', function($scope, $routeParams ) {
+.controller('AbilitySetCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {
 	$scope.test = $scope.set;
 	$scope.idx = $scope.set.id;
 	$scope.modes = $scope.mode;
@@ -17,15 +17,13 @@ angular.module('myApp.abilitySet', ['ngRoute' ])
 	$scope.getValue = function() {
 		return $scope.$parent.storage.getValue( $scope.idx );
 	}
-})
+}])
 
 .directive('abilitySet', function () {
 	return {
 		scope: { resource: '=', set: '=', index: '=', mode: '@', val: '=' },
 		templateUrl: '/app/abilities/abilityset.html',
-		controller: 'AbilitySetCtrl',
-		link: function ($scope, element) {
-		}
+		controller: 'AbilitySetCtrl'
 	}
 }
 )

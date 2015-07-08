@@ -2,7 +2,7 @@
 
 angular.module('myApp.dexEntry', ['ngRoute' ])
 
-.controller('DexEntryCtrl', function($scope, $routeParams ) {
+.controller('DexEntryCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {
 	var id = $scope.id;
 	$scope.Pokemon = AllData.allPokemon[id];
 	$scope.getValue = function () {
@@ -15,16 +15,13 @@ angular.module('myApp.dexEntry', ['ngRoute' ])
 		$scope.$parent.updateCode();
 	}
 		
-})
+} ] )
 
 .directive('dexEntry', function () {
 	return {
 		scope: { resource: '=', id: '=' , mode: '@'},
 		templateUrl: '/app/pokedex/dexentry.html',
-		controller: 'DexEntryCtrl',
-		link: function ($scope, element) {
-			
-		}
+		controller: 'DexEntryCtrl'
 	}
 }
 )

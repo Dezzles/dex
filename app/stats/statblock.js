@@ -2,17 +2,14 @@
 
 angular.module('myApp.statBlock', ['ngRoute' ])
 
-.controller('StatBlockCtrl', function($scope, $routeParams ) {
-})
+.controller('StatBlockCtrl', [ function( ) {
+} ])
 
 .directive('statBlock', function () {
 	return {
 		scope: { resource: '=', row: '=', dex: '=' },
-		templateUrl: '/app/stats/statBlock.html',
-		controller: 'StatBlockCtrl',
-		link: function ($scope, element) {
-			
-		}
+		templateUrl: '/app/stats/statblock.html',
+		controller: 'StatBlockCtrl'
 	}
 }
 )

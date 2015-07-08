@@ -1,4 +1,5 @@
 {
+	"clearCache" : true,
 	"packager" : {
 		"name" : "EasyPackage.Packagers.FtpPackager",
 		"settings" : "./connection",
@@ -10,7 +11,7 @@
 			"uploadPath" : "",
 			"files" : [
 				"app.css",
-				"app.js",
+				"app.js|EasyPackage.Processors.MinifyProcessor",
 				"cookies.min.js",
 				"index.html",
 				"pokething.css",
@@ -28,10 +29,10 @@
 							"uploadPath" : "abilities",
 							"files" : [
 								"abilities.html",
-								"abilities.js",
+								"abilities.js|EasyPackage.Processors.MinifyProcessor",
 								"abilityrow.html",
-								"abilityrow.js",
-								"abilityset.js",
+								"abilityrow.js|EasyPackage.Processors.MinifyProcessor",
+								"abilityset.js|EasyPackage.Processors.MinifyProcessor",
 								"abilityset.html"
 							]
 						},
@@ -40,10 +41,10 @@
 							"uploadPath" : "breeding",
 							"files" : [
 								"breeding.html",
-								"breeding.js",
+								"breeding.js|EasyPackage.Processors.MinifyProcessor",
 								"breedPair.html",
-								"breedPair.js",
-								"breedset.js",
+								"breedPair.js|EasyPackage.Processors.MinifyProcessor",
+								"breedset.js|EasyPackage.Processors.MinifyProcessor",
 								"breedset.html"
 							]
 						},
@@ -52,16 +53,16 @@
 							"uploadPath" : "ditto",
 							"files" : [
 								"ditto.html",
-								"ditto.js",
+								"ditto.js|EasyPackage.Processors.MinifyProcessor",
 								"dittostat.html",
-								"dittostat.js"
+								"dittostat.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
 							"path" : "header",
 							"uploadPath" : "header",
 							"files" : [
-								"directives.js",
+								"directives.js|EasyPackage.Processors.MinifyProcessor",
 								"footer.html",
 								"header.html"
 							]
@@ -71,7 +72,7 @@
 							"uploadPath" : "menu",
 							"files" : [
 								"menu.html",
-								"menu.js"
+								"menu.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
@@ -79,9 +80,9 @@
 							"uploadPath" : "pokedex",
 							"files" : [
 								"dexentry.html",
-								"dexentry.js",
+								"dexentry.js|EasyPackage.Processors.MinifyProcessor",
 								"pokedex.html",
-								"pokedex.js"
+								"pokedex.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
@@ -89,9 +90,9 @@
 							"uploadPath" : "egggroups",
 							"files" : [
 								"egggroups.html",
-								"egggroups.js",
+								"egggroups.js|EasyPackage.Processors.MinifyProcessor",
 								"eggentry.html",
-								"eggentry.js"
+								"eggentry.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
@@ -99,9 +100,9 @@
 							"uploadPath" : "stats",
 							"files" : [
 								"stats.html",
-								"stats.js",
+								"stats.js|EasyPackage.Processors.MinifyProcessor",
 								"statblock.html",
-								"statblock.js"
+								"statblock.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
@@ -109,7 +110,7 @@
 							"uploadPath" : "tools",
 							"files" : [
 								"tools.html",
-								"tools.js"
+								"tools.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						},
 						{
@@ -117,7 +118,7 @@
 							"uploadPath" : "updates",
 							"files" : [
 								"updates.html",
-								"updates.js"
+								"updates.js|EasyPackage.Processors.MinifyProcessor"
 							]
 						}
 
@@ -127,16 +128,16 @@
 					"path" : "data",
 					"uploadPath" : "data",
 					"files" : [
-						"abilityStorage.js",
-						"breedStorage.js",
-						"baseStorage.js",
-						"codeStorage.js",
-						"data.js",
-						"eggGroupStorage.js",
-						"dexStorage.js",
-						"dittoStorage.js",
-						"gameStorage.js",
-						"baseStorage.js"
+						"abilityStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"breedStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"baseStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"codeStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"data.js|EasyPackage.Processors.MinifyProcessor",
+						"eggGroupStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"dexStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"dittoStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"gameStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"baseStorage.js|EasyPackage.Processors.MinifyProcessor"
 						
 					]
 				},
@@ -157,8 +158,8 @@
 					"path" : "lib",
 					"uploadPath" : "lib",
 					"files" : [
-						"angular.min.js",
-						"angular-route.min.js"
+						"angular.min.js|EasyPackage.Processors.MinifyProcessor",
+						"angular-route.min.js|EasyPackage.Processors.MinifyProcessor"
 					]
 				}
 			]
