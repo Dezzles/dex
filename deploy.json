@@ -86,6 +86,16 @@
 							]
 						},
 						{
+							"path" : "berries",
+							"uploadPath" : "berries",
+							"files" : [
+								"berryentry.html",
+								"berryentry.js|EasyPackage.Processors.MinifyProcessor",
+								"berries.html",
+								"berries.js|EasyPackage.Processors.MinifyProcessor"
+							]
+						},
+						{
 							"path" : "egggroups",
 							"uploadPath" : "egggroups",
 							"files" : [
@@ -131,13 +141,15 @@
 						"abilityStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"breedStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"baseStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"berryStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"codeStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"data.js|EasyPackage.Processors.MinifyProcessor",
 						"eggGroupStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"dexStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"dittoStorage.js|EasyPackage.Processors.MinifyProcessor",
 						"gameStorage.js|EasyPackage.Processors.MinifyProcessor",
-						"baseStorage.js|EasyPackage.Processors.MinifyProcessor"
+						"baseStorage.js|EasyPackage.Processors.MinifyProcessor",
+						"toolSet.js|EasyPackage.Processors.MinifyProcessor"
 						
 					]
 				},

@@ -1,5 +1,14 @@
 [
 {
+	"version" : "3.32",
+	"date" : "2015-07-08",
+	"changes" : [
+		"Fixed bug with sharing that occurs in very specific situations",
+		"Added berry tracking tool.",
+		"Improved the way that tools are added to the system."
+	]
+},
+{
 	"version" : "3.31",
 	"date" : "2015-07-08",
 	"changes" : [

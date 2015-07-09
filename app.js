@@ -20,7 +20,9 @@ angular.module('myApp', [
   'myApp.abilityRow',
   'myApp.eggEntry',
   'myApp.eggGroups',
-  'myApp.statBlock'
+  'myApp.statBlock',
+  'myApp.berries',
+  'myApp.berryEntry'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/pokedex'});

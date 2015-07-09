@@ -1,0 +1,22 @@
+<tools-header></tools-header>
+<div class="outerRegion">
+	<div class="innerRegion">
+		<div>
+			<div class="block-6">
+				<h1>{{ addedNote }}Berries</h1>
+			</div>
+			<div class="standard-box-right">
+				<a class="standard-box-link" href="" ng-click="updateMode( )"> {{ text [ mode ] }}</a>
+			</div>
+			<div class="standard-box-right">
+				<a class="standard-box-link" href="/#/view/berries/{{ code }}/{{ text[mode] }}" target="_blank">Share</a>
+			</div>
+		</div>
+		Track which berries you do and don't have
+		<div class="block-12">
+			<div ng-repeat="group in berries" class="checkboxWrapper">
+				<div berry-entry groupid="{{ group.id }}" title="{{ group.name }}"> </entry>
+			</div>
+		</div>
+	</div>
+</div>

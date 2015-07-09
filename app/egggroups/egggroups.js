@@ -1,4 +1,5 @@
 'use strict';
+ToolSet.RegisterTool('Egg Groups', 'egggroups');
 
 angular.module('myApp.eggGroups', ['ngRoute' ])
 

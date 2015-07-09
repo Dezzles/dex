@@ -13,6 +13,11 @@ function BaseStorage ( parent ) {
 				data = Cookies.get( newData );
 			}
 			parent.data = data.split("");
+			if ( ( parent.requiredItems != null) && (parent.data.length < parent.requiredItems) ) {
+				while ( parent.data.length < parent.requiredItems ) {
+					parent.data.push( "0" );
+				}
+			}
 		}
 	}
 		
@@ -45,8 +50,13 @@ function BaseStorage ( parent ) {
 				byteoffset += 1;
 			}
 		}
-		
-		return btoa(String.fromCharCode.apply(null, encode));
+		var arrOut = btoa(String.fromCharCode.apply(null, encode));
+		var arrOut2 = arrOut;
+		for (var v in arrOut) {
+			if (arrOut[v] == '/')
+				arrOut2 = replaceAt( arrOut2, parseInt(v), '-' );
+		}
+		return arrOut2;
 	}
 	
 	parent.getValue = function ( slot ) {

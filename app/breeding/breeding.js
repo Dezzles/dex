@@ -1,4 +1,5 @@
 'use strict';
+ToolSet.RegisterTool('Breeding', 'breeding');
 
 angular.module('myApp.breeding', ['ngRoute' ])
 

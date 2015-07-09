@@ -3,7 +3,7 @@
 angular.module('myApp.tools', [])
 
 .controller('ToolsCtrl', function( $scope ) {
-
+	$scope.tools = ToolSet.tools;
 })
 
 .directive('toolsHeader', function () {
