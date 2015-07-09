@@ -1,29 +1,29 @@
 'use strict';
 
-ToolSet.RegisterTool('Abilities', 'abilities');
+ToolSet.RegisterTool('Berries', 'berries');
 
-angular.module('myApp.abilities', ['ngRoute' ])
+angular.module('myApp.berries', ['ngRoute' ])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/tools/abilities', {
-    templateUrl: 'app/abilities/abilities.html',
+  $routeProvider.when('/tools/berries', {
+    templateUrl: 'app/berries/berries.html',
+    controller: 'BerriesCtrl'
+  });
+  $routeProvider.when('/view/berries/:code', {
+    templateUrl: 'app/berries/berries.html',
     controller: 'AbilitiesCtrl'
   });
-  $routeProvider.when('/view/abilities/:code', {
-    templateUrl: 'app/abilities/abilities.html',
-    controller: 'AbilitiesCtrl'
-  });
-  $routeProvider.when('/view/abilities/:code/:view', {
-    templateUrl: 'app/abilities/abilities.html',
-    controller: 'AbilitiesCtrl'
+  $routeProvider.when('/view/berries/:code/:view', {
+    templateUrl: 'app/berries/berries.html',
+    controller: 'BerriesCtrl'
   });
 
 }
 
 ])
 
-.controller('AbilitiesCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {	
-	$scope.abilitySet = hiddenAbilities;
+.controller('BerriesCtrl', [ '$scope', '$routeParams', function($scope, $routeParams ) {	
+	$scope.berries = berries;
 	$scope.mode = 0;
 	$scope.text = [ 
 		"All",
@@ -41,12 +41,12 @@ angular.module('myApp.abilities', ['ngRoute' ])
 	}
 		
 	if ($routeParams['code'] == null) {
-		$scope.storage = new AbilityStorage();
+		$scope.storage = new BerryStorage();
 		$scope.code = $scope.storage.getCode();
 	}
 	else {
 		$scope.code = $routeParams['code'];
-		$scope.storage = new CodeStorage($scope.code, 2);
+		$scope.storage = new CodeStorage($scope.code, 1);
 		$scope.addedNote = "Viewing - ";
 	}
 	

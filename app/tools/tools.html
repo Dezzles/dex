@@ -1,8 +1,7 @@
 <div id="nav-primary">
 	<ul id="nav-primary">
-		<li ><a href="#/tools/breeding">Breeding</a></li>
-		<li ><a href="#/tools/ditto">Ditto</a></li>
-		<li ><a href="#/tools/abilities">Hidden Ability</a></li>
-		<li ><a href="#/tools/egggroups">Egg Groups</a></li>
+		<li ng-repeat="tool in tools">
+			<a href="#/tools/{{ tool.link }}">{{ tool.name }}</a>
+		</li>
 	</ul>
 </div>

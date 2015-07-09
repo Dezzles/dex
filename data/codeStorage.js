@@ -2,7 +2,12 @@ function CodeStorage ( val, offset ) {
 	this.data = [];
 	this.oldCode = val;
 	this.DecryptCode = function( val ) {
-		var load = new Uint8Array(atob(val).split("").map(function(c) {
+		var arrOut2 = val;
+		for (var v in val) {
+			if (val[v] == '-')
+				arrOut2 = replaceAt( arrOut2, parseInt(v), '/' );
+		}
+		var load = new Uint8Array(atob(arrOut2).split("").map(function(c) {
 		return c.charCodeAt(0); }));
 		for (var u in load) {
 			var tt = 0;

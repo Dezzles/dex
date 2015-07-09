@@ -1,4 +1,5 @@
 'use strict';
+ToolSet.RegisterTool('Dittos', 'ditto');
 
 angular.module('myApp.ditto', ['ngRoute' ])
 
